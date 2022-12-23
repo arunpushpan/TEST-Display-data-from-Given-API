@@ -1,0 +1,40 @@
+<div class="container text-center">
+    <h1 class="text-center text-primary m-5">User Details</h1>  
+    <table class="table border">
+      <thead>
+          <tr>
+           <th>User Id</th>
+           <th>First Name</th>
+           <th>Age</th>
+           <th>Gender</th>
+           <th>Email</th>
+           <th>Phone</th>
+           <th>Photo</th>
+           <th>Address</th>
+
+
+          </tr>
+         </thead>
+     
+       <tr *ngFor="let user of allUsers">
+         <td>{{user.id}}</td>
+         <td>{{user.firstName}}</td>
+
+         <td>{{ user.age }}</td>
+         <td>{{user.gender}}</td>
+
+         <td>{{ user.email }}</td>
+         <td>{{ user.phone }}</td>
+         <td>
+           <img
+             height="60px"
+             [src]="user.image"
+             alt="no image"
+           />
+         </td>
+         <td>{{ user.address.address }}</td>
+       </tr> 
+     
+    </table> 
+   </div>
+   
