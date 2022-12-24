@@ -1,5 +1,12 @@
 <div class="container text-center">
     <h1 class="text-center text-primary m-5">User Details</h1>  
+
+    <div class="row mb-5 ">
+      <form action="">
+<input (keyup)="search($event)" type="text" placeholder= "Enter First Name" style="width: 400px;" >
+      </form>
+    </div>
+
     <table class="table border">
       <thead>
           <tr>
@@ -16,7 +23,7 @@
           </tr>
          </thead>
      
-       <tr *ngFor="let user of allUsers">
+       <tr *ngFor="let user of allUsers | filter : searchKey: 'firstName' ">
          <td>{{user.id}}</td>
          <td>{{user.firstName}}</td>
 

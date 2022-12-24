@@ -9,6 +9,8 @@ import { ApiService } from '../service/api.service';
 export class ViewComponentComponent implements OnInit{
 
   allUsers:any[]=[]
+searchKey:string=''
+
   constructor(private api:ApiService){}
   ngOnInit():void{
 this.api.viewDetails().subscribe((data:any)=>{
@@ -18,4 +20,7 @@ this.api.viewDetails().subscribe((data:any)=>{
 
   }
 
+  search(event:any){
+    this.searchKey=event.target.value
+  }
 }
