@@ -23,6 +23,7 @@ email:string=''
 photo:string=''
 address:string=''
 phone:string=''
+num:any
   constructor(private activatedRoute:ActivatedRoute, private api:ApiService){}
 
  
@@ -31,6 +32,7 @@ phone:string=''
   this.api.viewDetails().subscribe((data:any)=>{
 
     this.allUsers=data.users
+    this.num=Math.floor((Math.random()*29)+1)
     // console.log(this.allUsers);
 
     // console.log(this.allUsers[ Math.floor((Math.random()*30)+1)].id);
@@ -39,12 +41,12 @@ phone:string=''
 this.user=this.allUsers
 // console.log(this.user);
 
-  this.photo=this.allUsers[Math.floor((Math.random()*29)+1)].image
-  this.name=this.allUsers[Math.floor((Math.random()*29)+1)].firstName
-  this.lname=this.allUsers[Math.floor((Math.random()*29)+1)].lastName
-  this.email=this.allUsers[Math.floor((Math.random()*29)+1)].email
-  this.phone=this.allUsers[Math.floor((Math.random()*29)+1)].phone
-  this.address=this.allUsers[Math.floor((Math.random()*29)+1)].address.address
+  this.photo=this.allUsers[this.num].image
+  this.name=this.allUsers[this.num].firstName
+  this.lname=this.allUsers[this.num].lastName
+  this.email=this.allUsers[this.num].email
+  this.phone=this.allUsers[this.num].phone
+  this.address=this.allUsers[this.num].address.address
   this.changeColor()
 
 // console.log(this.user);
