@@ -7,16 +7,26 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
+
   userUrl:string='https://dummyjson.com/users'
   constructor(private http: HttpClient) { }
 
-  
-  // getDetails():Observable<>{
-  //   return this.http.get(this.userUrl)
-  //  }
+ 
+  // function to view user details
+
   viewDetails(){
    return this.http.get(`${this.userUrl}`)
   }
 
-  
+  // reload(){
+  //   window.location.reload
+  // }
+// viewUser(){
+//   return this.http.get('https://dummyjson.com/users')
+// }
+  // viewUser(userId:string){
+  //   // return this.http.get('https://dummyjson.com/users/'+ userId)
+  //   return this.http.get(`${this.userUrl}/${userId}`)
+  // }
+
 }

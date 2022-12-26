@@ -5,16 +5,25 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(allUsers:any [], searchKey:string, propName:string): any [] {
-    const result:any = []
-    if(!allUsers || searchKey=='' || propName==''){
-      return allUsers
-    }
-    allUsers.forEach((user:any)=>{
-      if(user[propName].trim().toLowerCase().includes(searchKey.toLowerCase())){
-        result.push(user)
-      }
-    })
-    return result;
-  }
+
+transform(allUsers: any[], ) {
+  
+}
+
+// pipe to get user while searching
+
+//   transform(allUsers:any [], searchKey:string, propName:string): any [] {
+//     const result:any = []
+//     if(!allUsers || searchKey=='' || propName==''){
+//       return allUsers
+    
+//     }
+//     allUsers.forEach((user:any)=>{
+//       if(user[propName].trim().toLowerCase().includes(searchKey.toLowerCase())){
+//         result.push(user)
+//       }
+//     })
+//     return result;
+//   }
+// }
 }

@@ -1,0 +1,30 @@
+.circle-wrapper {
+    width:550px;
+    height:350px;
+    background: white;
+    position:relative;
+ }
+ 
+ .circle {
+    display:block;
+    position:absolute;
+    top:51%;
+    left:51%;
+    width:200px;
+    height:200px;
+    margin:-106px;
+    background:white;
+    border-radius:50%;
+    border: 2px solid ;
+ }
+ 
+
+ .deg-270 {
+    transform:rotate(271deg) translate(150px) rotate(-271deg);
+ }
+ i{
+   font-size: 20px;
+ }
+
+ 
+ 

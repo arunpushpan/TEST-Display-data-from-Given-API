@@ -1,12 +1,58 @@
+
+<div class="container text-center">
+  <h1 class="text-center text-success m-5 ">Generate Random User Details</h1>
+  <div class="container-fluid ">
+<div class="row mt-5  " [ngStyle]="{'background-color': bgColor}">
+  <div class="col-3"></div>
+  <div class="col-6 circle-wrapper mt-5 mb-3" > 
+   
+    <div class="circle deg-270 "  [ngStyle]="{'background-color': bgColor}">
+      <!-- <img src="{{photo}}" alt=""> -->
+      <!-- {{user | json}} -->
+    
+      <img
+      height="150px"
+      [src]="photo"
+      alt="no image"
+    />
+    </div>  
+    <br><br><br><br>
+<div class="mt-5">
+  
+     <h2 clas="text-center mt-5">{{name}} {{lname}}</h2>
+     <b>{{email}}</b><br>
+     <b><i class="fa-solid fa-phone"></i> {{phone}}</b><br>
+     <b><i class="fa-solid fa-location-dot"></i> {{address}}</b>
+
+   </div>
+
+   </div> 
+    <div>
+      <input (click)="reload() " type="button" value="Generate Random User" class="btn btn-success text-light mb-3">
+
+    </div>
+   <div class="col-3"></div>
+
+
+  </div>
+</div>
+
+</div>
+
+<!-- display data from given api and search for a particular user -->
+<!-- 
 <div class="container text-center">
     <h1 class="text-center text-primary m-5">User Details</h1>  
 
     <div class="row mb-5 ">
-      <form action="">
+      <!-- <form action="">
 <input (keyup)="search($event)" type="text" placeholder= "Enter First Name" style="width: 400px;" >
-      </form>
-    </div>
+      </form> -->
+    <!-- </div>
+<form action=""> -->
 
+  <!-- <label for="" name="id" [(ngModel)]="user.firstName"> Name</label> -->
+<!-- </form>
     <table class="table border">
       <thead>
           <tr>
@@ -23,25 +69,24 @@
           </tr>
          </thead>
      
-       <tr *ngFor="let user of allUsers | filter : searchKey: 'firstName' ">
-         <td>{{user.id}}</td>
-         <td>{{user.firstName}}</td>
+       <tr>
+         <td></td>
+          <td>{{use.firstName}}</td>
 
-         <td>{{ user.age }}</td>
-         <td>{{user.gender}}</td>
+         <td>{{ use.age }}</td>
+         <td>{{use.gender}}</td>
 
-         <td>{{ user.email }}</td>
-         <td>{{ user.phone }}</td>
+         <td>{{ use.email }}</td>
+         <td>{{ use.phone }}</td>
          <td>
            <img
              height="60px"
-             [src]="user.image"
+             [src]="use.image"
              alt="no image"
            />
-         </td>
-         <td>{{ user.address.address }}</td>
-       </tr> 
+         </td> -->
+         <!-- <td>{{ user.address.address }}</td> -->
+       <!-- </tr> 
      
     </table> 
-   </div>
-   
+   </div> -->  
